@@ -7,7 +7,7 @@ document.getElementById("withdrawBtn").addEventListener("click", function () {
   // console.log(totalWithdraw);
   // setElemetValue('withdrawAmount', totalWithdraw);
   if (isNaN(totalWithdraw)) {
-    alert("Name can't be blank");
+    alert("Invalid Withdraw Amount");
   } else {
     const totalBlance = elementByID("totalBalance");
     const newBlance = totalBlance - totalWithdraw;
@@ -16,7 +16,7 @@ document.getElementById("withdrawBtn").addEventListener("click", function () {
 
     setElemetValue("withdrawAmount", totalWithdraw);
     if (isNaN(newBlance)) {
-        alert("ErronewBlancer calculating new balance.");  
+        alert("Invalid Input");  
     } else if (newBlance < 0) {
         alert("Insufficient balance.");
     } else {

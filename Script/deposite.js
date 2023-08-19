@@ -7,13 +7,13 @@ document.getElementById('depositeBtn').addEventListener('click', function () {
   const totalDeposite = depositeAmount + previousDeposite;
   // setElemetValue('depositeTotalAmount', totalDeposite);
   if (isNaN(totalDeposite)){  
-    alert("Name can't be blank");  
+    alert("Invalid Desposite Amount");  
   }else{
        const totalBlance = elementByID('totalBalance');
    const newBlance = totalBlance + totalDeposite;
     
   if (isNaN(newBlance)){
-    alert('Invalid Desposite Amount');
+    alert('Invalid Input');
   }else {
     setElemetValue('depositeTotalAmount', totalDeposite);
     setElemetValue('totalBalance', newBlance);
