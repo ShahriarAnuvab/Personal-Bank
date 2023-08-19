@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./Styles/bank.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container mx-auto">
+    <header>
+        <h1 class="text-4xl lg:text7 font-bold uppercase text-center my-5">My Dashboard</h1>
+
+    </header>
+
+    <main>
+        <section class="grid md:grid-cols-3 text-center  text-white gap-5">
+            <div class="bg-amber-400 pb-3  rounded-3xl">
+                <h1 class="text-2xl lg:text-4xl font-semibold uppercase py-4">
+                    Deposite
+                </h1>
+                <p class="text-xl lg:text-3xl font-medium">$<span id="depositeTotalAmount">00</span> </p>
+            </div>
+
+            <div class="bg-red-500 pb-3 rounded-3xl">
+                <h1 class="text-2xl lg:text-4xl font-semibold uppercase py-4">
+                    Withdraw
+                </h1>
+                <p class="text-xl lg:text-3xl font-medium">$<span id="withdrawAmount">00</span> </p>
+            </div>
+            <div class="bg-blue-400 pb-3 rounded-3xl">
+                <h1 class="text-2xl lg:text-4xl font-semibold uppercase py-4">
+                    Balance
+                </h1>
+                <p class="text-xl lg:text-3xl font-medium">$<span id="totalBalance">1500</span> </p>
+            </div>
+        </section>
+        <section class="grid lg:grid-cols-2 gap-4 ">
+            <div class="bg-violet-400 rounded-3xl my-5 p-5 text-white">
+                <h1 class="text-2xl lg:text-4xl font-semibold uppercase py-4">
+                    Deposite Here
+                </h1>
+                <input class="md:w-3/12 lg:w-2/4 p-2  rounded-3xl text-black" type="text"
+                    placeholder="$Enter Deposite Amount" id="depositeFormAmount">
+                <br>
+                <button class="btn my-3  rounded-3xl" id="depositeBtn">Deposite</button>
+            </div>
+            <div class="bg-purple-600 rounded-3xl my-5 p-5 text-white">
+                <h1 class="text-2xl lg:text-4xl font-semibold uppercase py-4">
+                    Withdraw Here
+                </h1>
+                <input class="md:w-3/12  lg:w-2/4 p-2  rounded-3xl text-black" type="text"
+                    placeholder="$Enter Withdraw Amount" id="withdrawFormAmount">
+                <br>
+                <button class="btn my-3  rounded-3xl text-black" id="withdrawBtn">Withdraw</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="./Script/functions.js"></script>
+    <script src="./Script/deposite.js"></script>
+    <script src="./Script/withdraw.js"></script>
+</body>
+
+</html>
