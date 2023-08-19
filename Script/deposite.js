@@ -9,11 +9,19 @@ document.getElementById('depositeBtn').addEventListener('click', function () {
   if (isNaN(totalDeposite)){  
     alert("Name can't be blank");  
   }else{
-    setElemetValue('depositeTotalAmount', totalDeposite);
-  } 
-   const totalBlance = elementByID('totalBalance');
+       const totalBlance = elementByID('totalBalance');
    const newBlance = totalBlance + totalDeposite;
-   setElemetValue('totalBalance', newBlance);
+    
+  if (isNaN(newBlance)){
+    alert('Invalid Desposite Amount');
+  }else {
+    setElemetValue('depositeTotalAmount', totalDeposite);
+    setElemetValue('totalBalance', newBlance);
+  }
+  } 
+  //  const totalBlance = elementByID('totalBalance');
+  //  const newBlance = totalBlance + totalDeposite;
+  //  setElemetValue('totalBalance', newBlance);
    // console.log(newBlance);
 
 
